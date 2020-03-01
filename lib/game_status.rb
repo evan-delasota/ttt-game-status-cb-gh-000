@@ -53,3 +53,13 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  if (over?(board) && !draw(board))
+    win_combination = won?(board)
+    if (board[win_combination[0]] == "X") 
+      return "X"
+    else
+      return "O"
+    end
+  end
