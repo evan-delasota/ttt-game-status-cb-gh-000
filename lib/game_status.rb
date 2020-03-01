@@ -56,15 +56,13 @@ end
 
 def winner(board)
   if (over?(board) && !draw?(board))
-    winner = nil
     win_combination = won?(board)
-    if (board[win_combination[0]] == "X" || board[win_combination[1]] == "X" || board[win_combination[2]] == "X")
-      winner = "X"
-    elsif (board[win_combination[0]] == "O" || board[win_combination[1]] == "O" || board[win_combination[2]] == "O")
-      winner = "O"
+    if (board[win_combination[0]] == "X")
+      return "X"
+    elsif (board[win_combination[0]] == "O")
+      return "O"
     else
-       nil
+      return nil
     end
   end
-  return winner
 end
