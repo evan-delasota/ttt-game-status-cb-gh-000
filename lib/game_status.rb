@@ -10,7 +10,7 @@ WIN_COMBINATIONS = [
   ]
 
 def won?(board)
-  for each win_combination in WIN_COMBINATIONS
+  for win_combination in WIN_COMBINATIONS do
       win_index_1 = win_combination[0]
       win_index_2 = win_combination[1]
       win_index_3 = win_combination[2]
@@ -21,10 +21,9 @@ def won?(board)
 
       if (position_1 == "X" && position_2 == "X" && position_3 == "X")
         return win_combination
-      else
-        false
       end
   end
+  return false
 end
 =begin
 
