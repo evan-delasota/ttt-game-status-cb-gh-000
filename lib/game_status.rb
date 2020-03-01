@@ -55,7 +55,7 @@ def over?(board)
 end
 
 def winner(board)
-  if (over?(board) && !draw(board))
+  if (over?(board) && !draw?(board))
     winner = nil
     win_combination = won?(board)
     if (board[win_combination[0]] == "X" || board[win_combination[1]] == "X" || board[win_combination[2]] == "X")
